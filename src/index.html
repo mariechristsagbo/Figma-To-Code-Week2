@@ -5,6 +5,99 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="./output.css" rel="stylesheet" />
   </head>
+<style>
+  .group {
+ position: relative;
+}
+
+.input {
+ font-size: 16px;
+ padding: 10px 10px 10px 5px;
+ display: block;
+ width: 200px;
+ border: none;
+ border-bottom: 1px solid #515151;
+ background: transparent;
+}
+
+.input:focus {
+ outline: none;
+}
+
+label {
+ color: #999;
+ font-size: 18px;
+ font-weight: normal;
+ position: absolute;
+ pointer-events: none;
+ left: 5px;
+ top: 10px;
+ transition: 0.2s ease all;
+ -moz-transition: 0.2s ease all;
+ -webkit-transition: 0.2s ease all;
+}
+
+.input:focus ~ label, .input:valid ~ label {
+ top: -20px;
+ font-size: 14px;
+ color: black;
+}
+
+.bar {
+ position: relative;
+ display: block;
+ width: 200px;
+}
+
+.bar:before, .bar:after {
+ content: '';
+ height: 2px;
+ width: 0;
+ bottom: 1px;
+ position: absolute;
+ background: black;
+ transition: 0.2s ease all;
+ -moz-transition: 0.2s ease all;
+ -webkit-transition: 0.2s ease all;
+}
+
+.bar:before {
+ left: 50%;
+}
+
+.bar:after {
+ right: 50%;
+}
+
+.input:focus ~ .bar:before, .input:focus ~ .bar:after {
+ width: 50%;
+}
+
+.highlight {
+ position: absolute;
+ height: 60%;
+ width: 100px;
+ top: 25%;
+ left: 0;
+ pointer-events: none;
+ opacity: 0.5;
+}
+
+.input:focus ~ .highlight {
+ animation: inputHighlighter 0.3s ease;
+}
+
+@keyframes inputHighlighter {
+ from {
+  background: black;
+ }
+
+ to {
+  width: 0;
+  background: transparent;
+ }
+}
+</style>
   <body>
     <div class="bg-gray-800 bg-opacity-10">
       <div
@@ -256,7 +349,7 @@
                 </h1>
               </div>
             </div>
-            <div class="relative group">
+            <div class="relative">
               <img
                 alt=""
                 loading="lazy"
@@ -284,7 +377,7 @@
     </div>
 
     <section class="flex justify-center items-center min-h-screen">
-      <div class="mt-10 justify-center items-center">
+      <div class="mt-10 justify-center items-center " style = "padding-bottom : 5em;">
         <h1
           class="font-bold text-center text-black capitalize"
           style="font-size: xx-large"
@@ -317,6 +410,7 @@
           </div>
         </div>
 
+        
         <div class="flex flex-col">
           <div class="px-5 w-full max-md:max-w-full">
             <div class="flex gap-5 max-md:flex-col max-md:gap-0 max-md:">
@@ -584,7 +678,7 @@
       >
     </div>
 
-    <section class="flex justify-center items-center min-h-screen">
+    <section class="flex justify-center items-center " style="padding-bottom: 5em;">
       <div class="mt-10 justify-center items-center">
         <h1
           class="font-bold text-center text-black capitalize"
@@ -740,195 +834,105 @@
       </div>
     </section>
 
-    <section
-      class="flex justify-center items-center px-16 py-12 bg-gray-800 bg-opacity-10 max-md:px-5 mb-10"
-    >
-      <div
-        class="flex flex-col items-center w-full max-w-[704px] max-md:max-w-full"
-      >
-        <h1
-          class="text-3xl font-medium text-center text-black capitalize max-md:max-w-full"
+    <div class="flex justify-center items-center px-16 py-20 bg-gray-800 bg-opacity-10 max-md:px-5">
+      <div class="flex flex-col items-center w-full max-w-[704px] max-md:max-w-full">
+        <h1 class=" font-bold text-center text-black capitalize max-md:max-w-full max-md:text-4xl" 
+        style=" font-size : 2em;        line-height: normal; padding-top: 2em; padding-bottom: 2em;
+     ">FOLLOW PRODUCTS AND DISCOUNTS ON INSTAGRAM</h1>
+        <div class="flex gap-3 justify-center self-stretch mt-8 max-md:flex-wrap max-md:max-w-full"
         >
-          Follow products and discounts on Instagram
-        </h1>
-        <div
-          class="flex gap-3 justify-center flex-wrap self-stretch mt-8 max-md:flex-wrap max-md:max-w-full"
-        >
-          <!-- Ajout de max-md:w-1/2 pour que deux images s'affichent par ligne sur les petits écrans -->
-          <img
-            loading="lazy"
-            src="images/06.png"
-            class="max-w-full aspect-square w-[100px] mx-1 max-md:w-1/2"
-          />
-          <img
-            loading="lazy"
-            src="images/card (4).png"
-            class="max-w-full aspect-square w-[100px] mx-1 max-md:w-1/2"
-          />
-          <img
-            loading="lazy"
-            src="images/card (5).png"
-            class="max-w-full aspect-square w-[100px] mx-1 max-md:w-1/2"
-          />
-          <img
-            loading="lazy"
-            src="images/card (6).png"
-            class="max-w-full aspect-square w-[100px] mx-1 max-md:w-1/2"
-          />
-          <img
-            loading="lazy"
-            src="images/card (7).png"
-            class="max-w-full aspect-square w-[100px] mx-1 max-md:w-1/2"
-          />
-          <img
-            loading="lazy"
-            src="images/card (8).png"
-            class="max-w-full aspect-square w-[100px] mx-1 max-md:w-1/2"
-          />
+          <img loading="lazy" srcset="https://cdn.builder.io/api/v1/image/assets/TEMP/29b9548bc060e6b5b70a8dab20533993f2abfa941a17ad3fcec332f3c97accd0?apiKey=fa4147ce578540ddb84f08bc1cc99227&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/29b9548bc060e6b5b70a8dab20533993f2abfa941a17ad3fcec332f3c97accd0?apiKey=fa4147ce578540ddb84f08bc1cc99227&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/29b9548bc060e6b5b70a8dab20533993f2abfa941a17ad3fcec332f3c97accd0?apiKey=fa4147ce578540ddb84f08bc1cc99227&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/29b9548bc060e6b5b70a8dab20533993f2abfa941a17ad3fcec332f3c97accd0?apiKey=fa4147ce578540ddb84f08bc1cc99227&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/29b9548bc060e6b5b70a8dab20533993f2abfa941a17ad3fcec332f3c97accd0?apiKey=fa4147ce578540ddb84f08bc1cc99227&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/29b9548bc060e6b5b70a8dab20533993f2abfa941a17ad3fcec332f3c97accd0?apiKey=fa4147ce578540ddb84f08bc1cc99227&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/29b9548bc060e6b5b70a8dab20533993f2abfa941a17ad3fcec332f3c97accd0?apiKey=fa4147ce578540ddb84f08bc1cc99227&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/29b9548bc060e6b5b70a8dab20533993f2abfa941a17ad3fcec332f3c97accd0?apiKey=fa4147ce578540ddb84f08bc1cc99227&"class="max-w-full aspect-square w-[300px] mx-4" />
+          <img loading="lazy" srcset="https://cdn.builder.io/api/v1/image/assets/TEMP/726d4758e2eeb3f87ffdcf9cd523968127d5ccbe3ac6810e013a6ea3ed4d107e?apiKey=fa4147ce578540ddb84f08bc1cc99227&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/726d4758e2eeb3f87ffdcf9cd523968127d5ccbe3ac6810e013a6ea3ed4d107e?apiKey=fa4147ce578540ddb84f08bc1cc99227&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/726d4758e2eeb3f87ffdcf9cd523968127d5ccbe3ac6810e013a6ea3ed4d107e?apiKey=fa4147ce578540ddb84f08bc1cc99227&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/726d4758e2eeb3f87ffdcf9cd523968127d5ccbe3ac6810e013a6ea3ed4d107e?apiKey=fa4147ce578540ddb84f08bc1cc99227&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/726d4758e2eeb3f87ffdcf9cd523968127d5ccbe3ac6810e013a6ea3ed4d107e?apiKey=fa4147ce578540ddb84f08bc1cc99227&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/726d4758e2eeb3f87ffdcf9cd523968127d5ccbe3ac6810e013a6ea3ed4d107e?apiKey=fa4147ce578540ddb84f08bc1cc99227&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/726d4758e2eeb3f87ffdcf9cd523968127d5ccbe3ac6810e013a6ea3ed4d107e?apiKey=fa4147ce578540ddb84f08bc1cc99227&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/726d4758e2eeb3f87ffdcf9cd523968127d5ccbe3ac6810e013a6ea3ed4d107e?apiKey=fa4147ce578540ddb84f08bc1cc99227&"class="max-w-full aspect-square w-[300px] mx-4" />
+          <img loading="lazy" srcset="https://cdn.builder.io/api/v1/image/assets/TEMP/278d5d98ae9425d852e961dd3eda411b9491406ac0c033604bc488c4b854d769?apiKey=fa4147ce578540ddb84f08bc1cc99227&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/278d5d98ae9425d852e961dd3eda411b9491406ac0c033604bc488c4b854d769?apiKey=fa4147ce578540ddb84f08bc1cc99227&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/278d5d98ae9425d852e961dd3eda411b9491406ac0c033604bc488c4b854d769?apiKey=fa4147ce578540ddb84f08bc1cc99227&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/278d5d98ae9425d852e961dd3eda411b9491406ac0c033604bc488c4b854d769?apiKey=fa4147ce578540ddb84f08bc1cc99227&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/278d5d98ae9425d852e961dd3eda411b9491406ac0c033604bc488c4b854d769?apiKey=fa4147ce578540ddb84f08bc1cc99227&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/278d5d98ae9425d852e961dd3eda411b9491406ac0c033604bc488c4b854d769?apiKey=fa4147ce578540ddb84f08bc1cc99227&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/278d5d98ae9425d852e961dd3eda411b9491406ac0c033604bc488c4b854d769?apiKey=fa4147ce578540ddb84f08bc1cc99227&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/278d5d98ae9425d852e961dd3eda411b9491406ac0c033604bc488c4b854d769?apiKey=fa4147ce578540ddb84f08bc1cc99227&"class="max-w-full aspect-square w-[300px] mx-4" />
+          <img loading="lazy" srcset="https://cdn.builder.io/api/v1/image/assets/TEMP/716391dd08f176117c7d4a3d3ad3345b8f14846987b6ae9dc7ac218e1f58d31d?apiKey=fa4147ce578540ddb84f08bc1cc99227&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/716391dd08f176117c7d4a3d3ad3345b8f14846987b6ae9dc7ac218e1f58d31d?apiKey=fa4147ce578540ddb84f08bc1cc99227&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/716391dd08f176117c7d4a3d3ad3345b8f14846987b6ae9dc7ac218e1f58d31d?apiKey=fa4147ce578540ddb84f08bc1cc99227&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/716391dd08f176117c7d4a3d3ad3345b8f14846987b6ae9dc7ac218e1f58d31d?apiKey=fa4147ce578540ddb84f08bc1cc99227&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/716391dd08f176117c7d4a3d3ad3345b8f14846987b6ae9dc7ac218e1f58d31d?apiKey=fa4147ce578540ddb84f08bc1cc99227&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/716391dd08f176117c7d4a3d3ad3345b8f14846987b6ae9dc7ac218e1f58d31d?apiKey=fa4147ce578540ddb84f08bc1cc99227&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/716391dd08f176117c7d4a3d3ad3345b8f14846987b6ae9dc7ac218e1f58d31d?apiKey=fa4147ce578540ddb84f08bc1cc99227&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/716391dd08f176117c7d4a3d3ad3345b8f14846987b6ae9dc7ac218e1f58d31d?apiKey=fa4147ce578540ddb84f08bc1cc99227&"class="max-w-full aspect-square w-[300px] mx-4" />
+          <img loading="lazy" srcset="https://cdn.builder.io/api/v1/image/assets/TEMP/7e88cc01abf09ddab8318c218ac22824b72888a2a9839a3bc7be15d7d5fcfa78?apiKey=fa4147ce578540ddb84f08bc1cc99227&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/7e88cc01abf09ddab8318c218ac22824b72888a2a9839a3bc7be15d7d5fcfa78?apiKey=fa4147ce578540ddb84f08bc1cc99227&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/7e88cc01abf09ddab8318c218ac22824b72888a2a9839a3bc7be15d7d5fcfa78?apiKey=fa4147ce578540ddb84f08bc1cc99227&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/7e88cc01abf09ddab8318c218ac22824b72888a2a9839a3bc7be15d7d5fcfa78?apiKey=fa4147ce578540ddb84f08bc1cc99227&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/7e88cc01abf09ddab8318c218ac22824b72888a2a9839a3bc7be15d7d5fcfa78?apiKey=fa4147ce578540ddb84f08bc1cc99227&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/7e88cc01abf09ddab8318c218ac22824b72888a2a9839a3bc7be15d7d5fcfa78?apiKey=fa4147ce578540ddb84f08bc1cc99227&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/7e88cc01abf09ddab8318c218ac22824b72888a2a9839a3bc7be15d7d5fcfa78?apiKey=fa4147ce578540ddb84f08bc1cc99227&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/7e88cc01abf09ddab8318c218ac22824b72888a2a9839a3bc7be15d7d5fcfa78?apiKey=fa4147ce578540ddb84f08bc1cc99227&"class="max-w-full aspect-square w-[300px] mx-4" />
+          <img loading="lazy" srcset="https://cdn.builder.io/api/v1/image/assets/TEMP/017ed2432ea0c0fbd7eb1104a0f4c9cf9caf13f595a7ee99ff3e3800108e48df?apiKey=fa4147ce578540ddb84f08bc1cc99227&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/017ed2432ea0c0fbd7eb1104a0f4c9cf9caf13f595a7ee99ff3e3800108e48df?apiKey=fa4147ce578540ddb84f08bc1cc99227&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/017ed2432ea0c0fbd7eb1104a0f4c9cf9caf13f595a7ee99ff3e3800108e48df?apiKey=fa4147ce578540ddb84f08bc1cc99227&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/017ed2432ea0c0fbd7eb1104a0f4c9cf9caf13f595a7ee99ff3e3800108e48df?apiKey=fa4147ce578540ddb84f08bc1cc99227&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/017ed2432ea0c0fbd7eb1104a0f4c9cf9caf13f595a7ee99ff3e3800108e48df?apiKey=fa4147ce578540ddb84f08bc1cc99227&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/017ed2432ea0c0fbd7eb1104a0f4c9cf9caf13f595a7ee99ff3e3800108e48df?apiKey=fa4147ce578540ddb84f08bc1cc99227&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/017ed2432ea0c0fbd7eb1104a0f4c9cf9caf13f595a7ee99ff3e3800108e48df?apiKey=fa4147ce578540ddb84f08bc1cc99227&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/017ed2432ea0c0fbd7eb1104a0f4c9cf9caf13f595a7ee99ff3e3800108e48df?apiKey=fa4147ce578540ddb84f08bc1cc99227&"class="max-w-full aspect-square w-[300px] mx-4" />
         </div>
-        <h2 class="mt-9 text-3xl font-medium text-center text-black capitalize">
-          Or subscribe to the newsletter
-        </h2>
-        <form>
-          <div class="flex gap-3.5 mt-10 text-xs capitalize">
-            <label
-              class="flex flex-col flex-1 my-auto font-semibold text-gray-800 text-opacity-50"
-              for="email"
-              >Email address...</label
-            >
-            <input id="email" type="email" aria-label="Email address" />
-            <div
-              class="justify-center px-2 pb-1.5 text-center text-gray-800 whitespace-nowrap"
-              role="button"
-            >
-              SUBMIT
-            </div>
-          </div>
-        </form>
-      </div>
-    </section>
+        <h2 class="mt-9 font-bold text-center text-black capitalize "
+    style="font-size: 2em; ">
+      Or subscribe to the newsletter
+</h2>
 
-    <footer class="flex flex-col mt-10">
-      <div class="self-center px-5 w-full max-w-[704px] max-md:max-w-full">
-        <div class="flex gap-5 max-md:flex-col max-md:gap-0 max-md:">
-          <div class="flex flex-col w-[34%] max-md:ml-0 max-md:w-full">
-            <div class="flex flex-col grow max-md:mt-8">
-              <img
-                loading="lazy"
-                src="https://cdn.builder.io/api/v1/image/assets/TEMP/77e17865e377ab1e8f3bfcb2aaf6f572bddedfd0b8cca1b8c7545464c5e4a3a6?apiKey=fa4147ce578540ddb84f08bc1cc99227&"
-                class="w-24 aspect-[5.26]"
-              />
-              <p
-                class="mt-4 text-xl capitalize text-gray-800 text-opacity-80"
-                aria-label="Description"
-              >
-                Lorem ipsum dolor sit amet, consectetur adipiscing <br />
-                elit, sed do eiusmod tempor incididunt ut labore et <br />
-                dolore magna aliqua
-              </p>
-              <div
-                class="flex gap-5 justify-between py-0.5 pr-20 mt-4 text-xs text-center text-gray-800 whitespace-nowrap max-md:pr-5"
-              >
-                <div aria-label="Icon"></div>
-                <div aria-label="Icon"></div>
-                <div aria-label="Icon"></div>
-                <div aria-label="Icon"></div>
-              </div>
+        <div class="flex gap-3.5 mt-10 text-base capitalize" style="padding-bottom: 5em;">
+          <div class="flex flex-col flex-1 my-auto font-semibold text-gray-800 text-opacity-50">
+            <div class="group">
+              <input required type="text" class="input w-full lg:w-96">
+              <span class="highlight"></span>
+              <span class="bar"></span>
+              <label>Email Address</label>
             </div>
+            
+            
           </div>
-          <div class="flex flex-col ml-5 w-[24%] max-md:ml-0 max-md:w-full">
-            <div
-              class="flex flex-col grow py-0.5 pr-16 text-xl leading-3 text-gray-800 capitalize whitespace-nowrap max-md:mt-8"
-            >
-              <h5 class="text-xl font-semibold text-black" aria-label="Section">
-                CATALOG
-              </h5>
-              <p class="mt-4">Necklaces</p>
-              <p class="mt-1.5">hoodies</p>
-              <p class="mt-1.5">Jewelry Box</p>
-              <p class="mt-2">t-shirt</p>
-              <p class="mt-1.5">jacket</p>
-            </div>
+          <div class="justify-center px-2 pb-1.5 text-center text-gray-800 whitespace-nowrap aspect-[2.72]">
+            <button type="submit">SUBMIT</button>
           </div>
-          <div class="flex flex-col ml-5 w-[24%] max-md:ml-0 max-md:w-full">
-            <div
-              class="flex flex-col grow py-0.5 pr-9 text-xl leading-3 text-gray-800 capitalize max-md:mt-8"
-            >
-              <h5 class="text-xl font-semibold text-black whitespace-nowrap">
-                ABOUT US
-              </h5>
-              <header class="mt-4 whitespace-nowrap">Our Producers</header>
-              <header class="mt-1.5">Sitemap</header>
-              <header class="mt-1.5">FAQ</header>
-              <header class="mt-2">About Us</header>
-              <header class="mt-1.5 whitespace-nowrap">
-                Terms & Conditions
-              </header>
-            </div>
-          </div>
-          <header class="flex flex-col ml-5 w-[17%] max-md:ml-0 max-md:w-full">
-            <header
-              class="flex flex-col grow py-0.5 pr-5 text-xl leading-3 text-gray-800 capitalize max-md:mt-8"
-            >
-              <header class="text-xl font-bold text-black whitespace-nowrap">
-                CUSTOMER SERVICES
-              </header>
-              <header class="mt-4">Contact Us</header>
-              <header class="mt-1.5 whitespace-nowrap">Track Your Order</header>
-              <header class="mt-1.5 whitespace-nowrap">
-                Product Care & Repair
-              </header>
-              <header class="mt-2 whitespace-nowrap">
-                Book an Appointment
-              </header>
-              <header class="mt-1.5 whitespace-nowrap">
-                Shipping & Returns
-              </header>
-            </header>
-          </header>
         </div>
       </div>
-      <form
-        class="flex justify-center items-center px-16 py-10 mt-12 w-full text-white bg-gray-800 max-md:px-5 max-md:mt-10 max-md:max-w-full"
-      >
-        <header
-          class="flex gap-5 justify-between items-center w-full max-w-[705px] max-md:flex-wrap max-md:max-w-full"
-        >
-          <header
-            class="self-stretch my-auto text-xl capitalize"
-            aria-label="Copyright"
-          >
-            © 2022 Coral , Inc.
-          </header>
-          <img
-            loading="lazy"
-            srcset="
-              https://cdn.builder.io/api/v1/image/assets/TEMP/98a9548f9f5eb67b47f6e666281fb7604b15535a96a7907802963576d26b40d9?apiKey=fa4147ce578540ddb84f08bc1cc99227&width=100   100w,
-              https://cdn.builder.io/api/v1/image/assets/TEMP/98a9548f9f5eb67b47f6e666281fb7604b15535a96a7907802963576d26b40d9?apiKey=fa4147ce578540ddb84f08bc1cc99227&width=200   200w,
-              https://cdn.builder.io/api/v1/image/assets/TEMP/98a9548f9f5eb67b47f6e666281fb7604b15535a96a7907802963576d26b40d9?apiKey=fa4147ce578540ddb84f08bc1cc99227&width=400   400w,
-              https://cdn.builder.io/api/v1/image/assets/TEMP/98a9548f9f5eb67b47f6e666281fb7604b15535a96a7907802963576d26b40d9?apiKey=fa4147ce578540ddb84f08bc1cc99227&width=800   800w,
-              https://cdn.builder.io/api/v1/image/assets/TEMP/98a9548f9f5eb67b47f6e666281fb7604b15535a96a7907802963576d26b40d9?apiKey=fa4147ce578540ddb84f08bc1cc99227&width=1200 1200w,
-              https://cdn.builder.io/api/v1/image/assets/TEMP/98a9548f9f5eb67b47f6e666281fb7604b15535a96a7907802963576d26b40d9?apiKey=fa4147ce578540ddb84f08bc1cc99227&width=1600 1600w,
-              https://cdn.builder.io/api/v1/image/assets/TEMP/98a9548f9f5eb67b47f6e666281fb7604b15535a96a7907802963576d26b40d9?apiKey=fa4147ce578540ddb84f08bc1cc99227&width=2000 2000w,
-              https://cdn.builder.io/api/v1/image/assets/TEMP/98a9548f9f5eb67b47f6e666281fb7604b15535a96a7907802963576d26b40d9?apiKey=fa4147ce578540ddb84f08bc1cc99227&
-            "
-            class="self-stretch my-auto max-w-full aspect-[11.11] w-[151px]"
-          />
-          <header
-            class="flex gap-1 justify-between self-stretch px-2 py-1 whitespace-nowrap"
-          >
-            <header
-              class="grow text-xl capitalize md:m-auto"
-              aria-label="Scroll-to-top"
-            >
-              Scroll to top
-            </header>
-            <header class="self-start mt-1 text-xs font-black text-center">
-              
-            </header>
-          </header>
-        </header>
-      </form>
+    </div>
+
+    <footer class="mt-10">
+      <div class="self-center px-5 w-full mx-auto">
+        <div class="flex gap-5 flex-wrap md:flex-col">
+          
+          
+          <div class="flex flex-col w-full md:w-[34%] mt-8">
+            <img loading="lazy" src="images/logo.png" class="w-24 aspect-[5.26]" />
+            <p class="mt-4 text-xl capitalize text-gray-800 text-opacity-80">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+            <div class="flex gap-2 justify-between py-0.5 pr-20 mt-4 text-center text-gray-800">
+              <div aria-label="Icon"><img src="images/v6-icon (free).png" alt=""></div>
+              <div aria-label="Icon"><img src="images/v6-icon (free) (1).png" alt=""></div>
+              <div aria-label="Icon"><img src="images/v6-icon (free) (2).png" alt=""></div>
+              <div aria-label="Icon"><img src="images/v6-icon (free) (3).png" alt=""></div>
+            </div>
+          </div>
+    
+          <!-- Catalog Section -->
+          <div class="flex flex-col w-full md:w-[24%] mt-8">
+            <h5 class="text-xl font-bold text-black">CATALOG</h5>
+            <div class="mt-4">Necklaces</div>
+            <div class="mt-1.5">Hoodies</div>
+            <div class="mt-1.5">Jewelry Box</div>
+            <div class="mt-2">T-shirt</div>
+            <div class="mt-1.5">Jacket</div>
+          </div>
+    
+          <!-- About Us Section -->
+          <div class="flex flex-col w-full md:w-[24%] mt-8">
+            <h5 class="text-xl font-bold text-black">ABOUT US</h5>
+            <div class="mt-4">Our Producers</div>
+            <div class="mt-1.5">Sitemap</div>
+            <div class="mt-1.5">FAQ</div>
+            <div class="mt-2">About Us</div>
+            <div class="mt-1.5">Terms & Conditions</div>
+          </div>
+    
+          <!-- Customer Services Section -->
+          <div class="flex flex-col w-full md:w-[17%] mt-8">
+            <div class="text-xl font-bold text-black">CUSTOMER SERVICES</div>
+            <div class="mt-4">Contact Us</div>
+            <div class="mt-1.5">Track Your Order</div>
+            <div class="mt-1.5">Product Care & Repair</div>
+            <div class="mt-2">Book an Appointment</div>
+            <div class="mt-1.5">Shipping & Returns</div>
+          </div>
+          
+        </div>
+      </div>
+    
+      <div class="flex flex-col items-center px-10 py-10 mt-10 text-white bg-gray-800 mx-auto w-full max-w-[90%] lg:max-w-[80%] xl:max-w-[70%] text-center">
+        <div class="text-xl capitalize" aria-label="Copyright">
+          © 2022 Coral, Inc.
+        </div>
+        <img loading="lazy" src="images/icons_payment 1.png" class="my-4 w-[300px] mx-auto" alt="Payment Icons" />
+        <div class="text-xl capitalize" aria-label="Scroll-to-top">
+          Scroll to top
+        </div>
+      </div>
+      
     </footer>
+    
   </body>
 </html>
