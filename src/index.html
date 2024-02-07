@@ -7,9 +7,32 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"
+/>
     <link href="./output.css" rel="stylesheet" />
   </head>
 <style>
+
+.mySwiper {
+  display: block; /* Afficher sur les petits écrans */
+}
+
+@media (min-width: 1024px) { /* Taille pour 'lg' dans Tailwind par défaut */
+  .mySwiper {
+    display: none; /* Cacher sur les grands écrans */
+  }
+}
+
+.swiper-button-next, .swiper-button-prev {
+  transform: scale(0.9); /* Réduit la taille à 80% de la taille originale */
+}
+
+
+.swiper-button-next, .swiper-button-prev {
+  background-size: 10px 10px; /* Ajustez la taille du fond */
+  color: rgb(45, 48, 51);
+}
+
   .group {
  position: relative;
 }
@@ -223,7 +246,7 @@ label {
       />
     </div>
 
-    <div class="lg:max-w-7xl max-w-[350px] mx-auto py-10 mb-20">
+    <div class="lg:max-w-7xl max-w-[350px] mx-auto py-10 mb-15">
       <div class="flex lg:flex-row flex-col gap-6 pl-6">
         <div class="relative">
           <div class="relative">
@@ -359,7 +382,7 @@ label {
       </div>
     </div>
 
-    <section class="flex justify-center items-center min-h-screen">
+    <section class="flex justify-center items-center mx-10">
       <div class="mt-10 justify-center items-center " style = "padding-bottom : 5em;">
         <h1
           class="font-bold text-center text-black capitalize"
@@ -368,249 +391,81 @@ label {
           Products
         </h1>
 
-        <div
-          class="flex gap-5 justify-between max-w-[704px] max-md:flex-wrap pt-6"
-        >
+        <div class="#">
           <div
             class="flex lg:flex-row gap-5 flex-col justify-between items-center mb-6"
           >
             <ul class="flex gap-3 font-open-sans text-dark-50 font-semibold">
               <li class="hover:text-dark">All Products</li>
-              <li class="hover:text-dark">T-Shirt</li>
-              <li class="hover:text-dark">Hoodies</li>
-              <li class="hover:text-dark">Jacket</li>
+              <li class="opacity-50">T-Shirt</li>
+              <li class="opacity-50">Hoodies</li>
+              <li class="opacity-50">Jacket</li>
             </ul>
+
+            <button class="bg-gray-800 flex  justify-around items-center text-white px-3 py-1">
+              <img src="images/search.png" alt="" class="p-2"> 
+              Filter
+            </button>
+          </div>
+
+          <div class="grid grid-cols-4 gap-5"> 
+            <div>
+              <img src="images/top-product.png" alt="">
+              <p class="mt-2 font-bold">Adicolors Classics Joggers</p>
+              <p class="flex justify-between mt-2"><span class="opacity-50">Dress</span> <span class="font-bold">$63.85</span></p>
             
-          </div>
-
-          <div
-            class="flex gap-1 justify-between px-2.5 py-1 text-white whitespace-nowrap bg-gray-800"
-          >
-            <div class="my-auto text-xs font-black text-center">
-              <img src="images/search.png" alt="" />
             </div>
-            <div class="text-base capitalize">Filter</div>
-          </div>
-        </div>
-
-       
-        <div class="flex flex-col">
-          <div style="padding-bottom: 5em;">
-          <div class="px-5 w-full max-md:max-w-full">
-            <div class="flex gap-5 max-md:flex-col max-md:gap-0 max-md:">
-              <div class="flex flex-col w-3/12 max-md:ml-0 max-md:w-full">
-                <div
-                  class="flex flex-col grow py-px text-base capitalize max-md:mt-3"
-                >
-                  <img
-                    loading="lazy"
-                    src="images/top-product.png"
-                    class="self-center w-[300px]"
-                  />
-
-                  &nbsp;
-
-                  <div class="mt-3 font-bold text-black">
-                    Adicolor Classics Joggers
-                  </div>
-                  <div
-                    class="flex gap-5 justify-between mt-3 whitespace-nowrap max-md:mr-1.5"
-                  >
-                    <div class="text-black text-opacity-50">Dress</div>
-                    <div class="font-bold text-right text-black">$63.85</div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="flex flex-col ml-5 w-3/12 max-md:ml-0 max-md:w-full">
-                <div
-                  class="flex flex-col grow py-px text-base capitalize max-md:mt-3"
-                >
-                  <img
-                    loading="lazy"
-                    src="images/nike_sportwear.png"
-                    class="self-center w-[300px]"
-                  />
-
-                  &nbsp;
-
-                  <div class="mt-3 font-bold text-black">
-                    Nike Sportswear Futura Luxe
-                  </div>
-                  <div
-                    class="flex gap-5 justify-between mt-3 whitespace-nowrap max-md:mr-1.5"
-                  >
-                    <div class="text-black text-opacity-50">Bag</div>
-                    <div class="font-bold text-right text-black">$130.00</div>
-                  </div>
-                </div>
-              </div>
-              <div class="flex flex-col ml-5 w-3/12 max-md:ml-0 max-md:w-full">
-                <div
-                  class="flex flex-col grow py-px text-base capitalize max-md:mt-3"
-                >
-                  <img
-                    loading="lazy"
-                    src="images/13.png"
-                    class="self-center w-[300px]"
-                  />
-                  &nbsp;
-                  <div class="mt-3 font-bold text-black">
-                    Geometric print Scarf
-                  </div>
-                  <div
-                    class="flex gap-5 justify-between mt-3.5 whitespace-nowrap max-md:mr-1.5"
-                  >
-                    <div class="text-black text-opacity-50">scarf</div>
-                    <div class="font-bold text-right text-black">$53.00</div>
-                  </div>
-                </div>
-              </div>
-              <div class="flex flex-col ml-5 w-3/12 max-md:ml-0 max-md:w-full">
-                <div class="flex flex-col grow py-px capitalize max-md:mt-3">
-                  <div
-                    class="flex overflow-hidden relative flex-col self-center pt-3 pb-12 text-xs font-semibold text-white  whitespace-nowrap"
-                  >
-                    <img
-                      loading="lazy"
-                      src="images/yellow_reserved_hoodie.png"
-                      class="self-center w-[300px]"
-                    />
-
-                    &nbsp;
-
-                    <div class="mt-3 text-base font-bold text-black">
-                      Yellow Reserved Hoodie
-                    </div>
-                    <div
-                    class="flex gap-5 justify-between mt-3 whitespace-nowrap max-md:mr-1.5"
-                  >
-                    <div class="text-black text-opacity-50">Dress</div>
-                      <div class="flex gap-2 justify-between text-right">
-                        <div class="text-sm text-black text-opacity-10">
-                          <del> $364.00</del>
-                        </div>
-                        <div
-                          class="text-base font-bold"
-                          style="color: rgb(237, 19, 19)"
-                        >
-                          $155.00
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  
-                </div>
-              </div>
+            <div>
+              <img src="images/nike_sportwear.png" alt="">
+              <p class="mt-2 font-bold">Nike Sportswear Futura Luxe</p>
+              <p class="flex justify-between mt-2"><span class="opacity-50">Bag</span><span class="font-bold">$130.00</span></p>
+            
             </div>
-          </div>
-        </div>
-          <div class="px-5 mt-3.5 w-full max-md:max-w-full">
-            <div class="flex gap-5 max-md:flex-col max-md:gap-0 max-md:">
-              <div class="flex flex-col w-3/12 max-md:ml-0 max-md:w-full">
-                <div
-                  class="flex flex-col grow py-0.5 text-base capitalize max-md:mt-3"
-                >
-                  <div
-                    class="flex overflow-hidden relative flex-col justify-center self-center pt-3 pb-12 text-xs font-semibold text-center text-white uppercase whitespace-nowrap"
-                  >
-                    <img
-                      loading="lazy"
-                      src="images/top-product (2).png"
-                      class="self-center w-[300px]"
-                    />
-
-                    &nbsp;
-                  </div>
-                  <div class="mt-3 font-bold text-black">Basic Dress Green</div>
-                  <div
-                    class="flex gap-5 justify-between mt-3.5 whitespace-nowrap max-md:mr-1.5"
-                  >
-                    <div class="text-black text-opacity-50">Dress</div>
-                    <div class="font-bold text-right text-black">$236.00</div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="flex flex-col ml-5 w-3/12 max-md:ml-0 max-md:w-full">
-                <div class="flex flex-col grow py-0.5 capitalize max-md:mt-3">
-                  <div
-                    class="flex overflow-hidden relative flex-col self-center pt-3 pb-12 text-xs font-semibold text-white uppercase whitespace-nowrap"
-                  >
-                    <img
-                      loading="lazy"
-                      src="images/nike_air_zoom.png"
-                      class="self-center w-[300px]"
-                    />
-
-                    &nbsp;
-                  </div>
-                  <div class="mt-3 text-base font-bold text-black">
-                    Nike Air Zoom Pegasus
-                  </div>
-                  <div
-                    class="flex gap-5 justify-between mt-3 w-full whitespace-nowrap max-md:mr-1.5"
-                  >
-                    <div class="text-base text-black text-opacity-50">Shoe</div>
-                    <div
-                      class="flex gap-2 justify-between font-bold text-right"
-                    >
-                      <div class="text-sm text-black text-opacity-50">
-                        <del>$220.00</del>
-                      </div>
-                      <div class="text-base" style="color: rgb(237, 19, 19)">
-                        $198.00
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="flex flex-col ml-5 w-3/12 max-md:ml-0 max-md:w-full">
-                <div
-                  class="flex flex-col grow py-0.5 text-base capitalize max-md:mt-3"
-                >
-                  <img
-                    loading="lazy"
-                    src="images/top-product (4).png"
-                    class="self-center w-[300px]"
-                  />
-                  &nbsp;
-                  <div class="mt-3 font-bold text-black">Nike Repel Miler</div>
-                  <div
-                    class="flex gap-5 justify-between mt-3 whitespace-nowrap max-md:mr-1.5"
-                  >
-                    <div class="text-black text-opacity-50">Dress</div>
-                    <div class="font-bold text-right text-black">$120.50</div>
-                  </div>
-                </div>
-              </div>
-              <div class="flex flex-col ml-5 w-3/12 max-md:ml-0 max-md:w-full">
-                <div
-                  class="flex flex-col grow py-0.5 text-base capitalize whitespace-nowrap max-md:mt-3"
-                >
-                  <img
-                    loading="lazy"
-                    src="images/top-product (5).png"
-                    class="self-center w-[300px]"
-                  />
-                  &nbsp;
-                  <div class="flex gap-2 justify-between mt-3">
-                    <div class="flex flex-col flex-1">
-                      <div class="font-bold text-black">
-                        Nike Sportswear Futura Luxe
-                      </div>
-                      <div class="mt-3 text-black text-opacity-50">Glasses</div>
-                    </div>
-                    <div
-                      class="grow self-start mt-5 font-bold text-right text-black"
-                    >
-                      $160.00
-                    </div>
-                  </div>
-                </div>
-              </div>
+            <div>
+              <img src="images/13.png" alt="">
+              <p class="mt-2 font-bold">Geometric Print Scarf</p>
+              <p class="flex justify-between mt-2"><span class="opacity-50">Scarf</span><span class="font-bold">$53.00</span></p>
+            
             </div>
+
+            <div>
+              <img src="images/yellow_reserved_hoodie.png" alt="">
+              <p class="mt-2 font-bold">Yellow Reserved Hoodie</p>
+              <p class="flex justify-between mt-2"><span class="opacity-50">Dress</span> <span><del class="text-xs opacity-50">$364.00</del> <span class="text-red-500 font-bold">$155</span></span></p>
+            </div>
+
+            <div>
+              <img src="images/top-product (2).png" alt="">
+              <p class="mt-2 font-bold">Basic Dress Green</p>
+              <p class="flex justify-between mt-2"><span class="opacity-50">Dress</span><span class="font-bold">$236.00</span></p>
+            
+            </div>
+
+            <div>
+              <img src="images/nike_air_zoom.png" alt="">
+              <p class="mt-2 font-bold">Nike Air Zoom Pegasus</p>
+              <p class="flex justify-between mt-2"><span class="opacity-50">Shoe</span> <span><del class="text-xs opacity-50">$220.00</del> <span class="text-red-500 font-bold">$198</span></span></p>
+            
+            </div>
+
+            <div>
+              <img src="images/top-product (4).png" alt="">
+              <p class="mt-2 font-bold">Nike Repel Miler</p>
+              <p class="flex justify-between mt-2"><span class="opacity-50">Dress</span> <span class="font-bold">$120.50</span></p>
+            
+            </div>
+
+            <div>
+              <img src="images/top-product (5).png" alt="">
+              <p class="mt-2 font-bold">Nike Sportswear Futura Luxe</p>
+              <p class="flex justify-between mt-2"><span class="opacity-50">Glasses</span> <span class="font-bold">$199</span></p>
+            
+            </div>
+
+
+
           </div>
+         
         </div>
         
       </div>
@@ -664,161 +519,68 @@ label {
       >
     </div>
 
-    <section class="flex justify-center items-center " style="padding-bottom: 5em;">
-      <div class="mt-10 justify-center items-center">
-        <h1
-          class="font-bold text-center text-black capitalize"
-          style="font-size: 3em; padding-bottom: 1em;"
-        >
+    <section class="flex justify-center items-center mx-10">
+      <div class="mt-10 justify-center items-center " style="padding-bottom: 5em;">
+        <h1 class="font-bold text-center text-black capitalize" style="font-size: 3em; padding-bottom: 1em;">
           Best Sellers
         </h1>
-
-        <div
-          class="flex gap-5 justify-between max-w-[704px] max-md:flex-wrap pt-6"
-        >
-          <div
-            class="flex lg:flex-row gap-5 flex-col justify-between items-center mb-6"
-          >
+    
+        <div class="#">
+          <div class="flex lg:flex-row gap-5 flex-col justify-between items-center mb-6">
             <ul class="flex gap-3 font-open-sans text-dark-50 font-semibold">
-              <li class="hover:text-dark">All Products</li>
-              <li class="hover:text-dark">T-Shirt</li>
-              <li class="hover:text-dark">Hoodies</li>
-              <li class="hover:text-dark">Jacket</li>
+              <li>All Products</li>
+              <li class="opacity-50">T-Shirt</li>
+              <li class="opacity-50">Hoodies</li>
+              <li class="opacity-50">Jacket</li>
             </ul>
-            
+    
+            <button class="bg-gray-800 flex justify-around items-center text-white px-3 py-1">
+              Show All
+            </button>
           </div>
-
-          <div
-            class="flex gap-1 justify-between px-2.5 py-1 text-white whitespace-nowrap bg-gray-800"
-          >
-            <div class="my-auto text-xs font-black text-center">
-              <img src="images/icon (1).png" alt="" />
-            </div>
-            <div class="text-base capitalize">Show all</div>
-          </div>
-        </div>
-
-        <div class="flex flex-col">
-          <div class="px-5 w-full max-md:max-w-full">
-            <div class="flex gap-5 max-md:flex-col max-md:gap-0 max-md:">
-              <div class="flex flex-col w-3/12 max-md:ml-0 max-md:w-full">
-                <div
-                  class="flex flex-col grow py-px text-base capitalize max-md:mt-3"
-                >
-                  <img
-                    loading="lazy"
-                    src="images/top-product (2).png"
-                    class="self-center w-[300px]"
-                  />
-
-                  &nbsp;
-
-                  <div class="mt-3 font-bold text-black">
-                    Basic Dress Green
-                  </div>
-                  <div
-                    class="flex gap-5 justify-between mt-3 whitespace-nowrap max-md:mr-1.5"
-                  >
-                    <div class="text-black text-opacity-5">Dress</div>
-                    <div class="font-bold text-right text-black">$63.85</div>
-                  </div>
-                </div>
+    
+          <!-- Swiper -->
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <!-- Slide 1 -->
+              <div class="swiper-slide">
+                <img src="images/top-product (2).png" alt="">
+                <p class="mt-2 font-bold">Basics Dress Green</p>
+                <p class="flex justify-between mt-2"><span class="opacity-50">Dress</span> <span class="font-bold">$236.00</span></p>
               </div>
-
-              <div class="flex flex-col ml-5 w-3/12 max-md:ml-0 max-md:w-full">
-                <div
-                  class="flex flex-col grow py-px text-base capitalize max-md:mt-3"
-                >
-                  <img
-                    loading="lazy"
-                    src="images/nike_sportwear.png"
-                    class="self-center w-[300px]"
-                  />
-
-                  &nbsp;
-
-                  <div class="mt-3 font-bold text-black">
-                    Nike Sportswear Futura Luxe
-                  </div>
-                  <div
-                    class="flex gap-5 justify-between mt-3 whitespace-nowrap max-md:mr-1.5"
-                  >
-                    <div class="text-black text-opacity-10">Bag</div>
-                    <div class="font-bold text-right text-black">$130.00</div>
-                  </div>
-                </div>
+    
+              <!-- Slide 2 -->
+              <div class="swiper-slide">
+                <img src="images/nike_sportwear.png" alt="">
+                <p class="mt-2 font-bold">Nike Sportswear Futura Luxe</p>
+                <p class="flex justify-between mt-2"><span class="opacity-50">Bag</span><span class="font-bold">$130.00</span></p>
               </div>
-              <div class="flex flex-col ml-5 w-3/12 max-md:ml-0 max-md:w-full">
-                <div
-                  class="flex flex-col grow py-px text-base capitalize max-md:mt-3"
-                >
-                  <img
-                    loading="lazy"
-                    src="images/13.png"
-                    class="self-center w-[300px]"
-                  />
-                  &nbsp;
-                  <div class="mt-3 font-bold text-black">
-                    Geometric print Scarf
-                  </div>
-                  <div
-                    class="flex gap-5 justify-between mt-3.5 whitespace-nowrap max-md:mr-1.5"
-                  >
-                    <div class="text-black text-opacity-10">scarf</div>
-                    <div class="font-bold text-right text-black">$53.00</div>
-                  </div>
-                </div>
+    
+              <!-- Slide 3 -->
+              <div class="swiper-slide">
+                <img src="images/yellow_reserved_hoodie.png" alt="">
+                <p class="mt-2 font-bold">Yellow Reserved Hoodie</p>
+                <p class="flex justify-between mt-2"><span class="opacity-50">Dress</span> <span><del class="text-xs opacity-50">$364.00</del> <span class="text-red-500 font-bold">$155.00</span></span></p>
               </div>
-              <div class="flex flex-col ml-5 w-3/12 max-md:ml-0 max-md:w-full">
-                <div class="flex flex-col grow py-px capitalize max-md:mt-3">
-                  <div
-                    class="flex overflow-hidden relative flex-col self-center pt-3 pb-12 text-xs font-semibold text-white uppercase whitespace-nowrap"
-                  >
-                    <img
-                      loading="lazy"
-                      src="images/yellow_reserved_hoodie.png"
-                      class="self-center w-[300px]"
-                    />
-
-                    &nbsp;
-                  </div>
-                  <div class="mt-3 text-base font-bold text-black">
-                    Yellow Reserved Hoodie
-                  </div>
-                  <div
-                    class="flex gap-5 justify-between mt-3.5 w-full whitespace-nowrap max-md:mr-1.5"
-                  >
-                    <div class="text-base text-black text-opacity-10">
-                      Dress
-                    </div>
-                    <div class="flex gap-2 justify-between text-right">
-                      <div class="text-sm text-black text-opacity-10">
-                        <del> $364.00</del>
-                      </div>
-                      <div
-                        class="text-base font-bold"
-                        style="color: rgb(237, 19, 19)"
-                      >
-                        $155.00
-                      </div>
-                    </div>
-                  </div>
-                </div>
+    
+              <!-- Slide 4 -->
+              <div class="swiper-slide">
+                <img src="images/nike_air_zoom.png" alt="">
+                <p class="mt-2 font-bold">Nike Air Zoom Pegasus</p>
+                <p class="flex justify-between mt-2"><span class="opacity-50">Shoe</span> <span><del class="text-xs opacity-50">$220.00</del> <span class="text-red-500 font-bold">$198.00</span></span></p>
               </div>
             </div>
+            <!-- Ajouter Pagination -->
+            <div class="swiper-pagination"></div>
+            <!-- Ajouter Navigation -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
           </div>
-          <div class="px-5 mt-3.5 w-full max-md:max-w-full">
-            <div class="flex gap-5 max-md:flex-col max-md:gap-0 max-md:">
-              <div class="flex flex-col w-3/12 max-md:ml-0 max-md:w-full">
-                <div
-                  class="flex flex-col grow py-0.5 text-base capitalize max-md:mt-3"
-                >
-                </div>
-              </div>
-             
         </div>
       </div>
     </section>
+    
+  
 
     <div class="flex justify-center items-center px-16 py-20 bg-gray-800 bg-opacity-10 max-md:px-5">
       <div class="flex flex-col items-center w-full max-md:max-w-full">
@@ -921,5 +683,24 @@ label {
 
     </footer>
   
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        var mySwiper = new Swiper('.mySwiper', {
+          // Paramètres de Swiper
+          loop: true,
+          slidesPerView: 1,
+          spaceBetween: 30,
+          pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+          },
+          navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+          },
+        });
+      });
+    </script>
+    
   </body>
 </html>
