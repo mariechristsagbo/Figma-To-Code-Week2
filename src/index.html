@@ -7,32 +7,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"
-/>
     <link href="./output.css" rel="stylesheet" />
   </head>
 <style>
-
-.mySwiper {
-  display: block; /* Afficher sur les petits écrans */
-}
-
-@media (min-width: 1024px) { /* Taille pour 'lg' dans Tailwind par défaut */
-  .mySwiper {
-    display: none; /* Cacher sur les grands écrans */
-  }
-}
-
-.swiper-button-next, .swiper-button-prev {
-  transform: scale(0.9); /* Réduit la taille à 80% de la taille originale */
-}
-
-
-.swiper-button-next, .swiper-button-prev {
-  background-size: 10px 10px; /* Ajustez la taille du fond */
-  color: rgb(45, 48, 51);
-}
-
   .group {
  position: relative;
 }
@@ -520,63 +497,63 @@ label {
     </div>
 
     <section class="flex justify-center items-center mx-10">
-      <div class="mt-10 justify-center items-center " style="padding-bottom: 5em;">
-        <h1 class="font-bold text-center text-black capitalize" style="font-size: 3em; padding-bottom: 1em;">
+      <div class="mt-10 justify-center items-center " style = "padding-bottom : 5em;">
+        <h1
+          class="font-bold text-center text-black capitalize"
+          style="font-size: 3em; padding-bottom: 1em;"
+        >
           Best Sellers
         </h1>
-    
+
         <div class="#">
-          <div class="flex lg:flex-row gap-5 flex-col justify-between items-center mb-6">
+          <div
+            class="flex lg:flex-row gap-5 flex-col justify-between items-center mb-6"
+          >
             <ul class="flex gap-3 font-open-sans text-dark-50 font-semibold">
               <li>All Products</li>
               <li class="opacity-50">T-Shirt</li>
               <li class="opacity-50">Hoodies</li>
               <li class="opacity-50">Jacket</li>
             </ul>
-    
-            <button class="bg-gray-800 flex justify-around items-center text-white px-3 py-1">
+
+            <button class="bg-gray-800 flex  justify-around items-center text-white px-3 py-1">
+
               Show All
             </button>
           </div>
-    
-          <!-- Swiper -->
-          <div class="swiper mySwiper">
-            <div class="swiper-wrapper">
-              <!-- Slide 1 -->
-              <div class="swiper-slide">
-                <img src="images/top-product (2).png" alt="">
-                <p class="mt-2 font-bold">Basics Dress Green</p>
-                <p class="flex justify-between mt-2"><span class="opacity-50">Dress</span> <span class="font-bold">$236.00</span></p>
-              </div>
-    
-              <!-- Slide 2 -->
-              <div class="swiper-slide">
-                <img src="images/nike_sportwear.png" alt="">
-                <p class="mt-2 font-bold">Nike Sportswear Futura Luxe</p>
-                <p class="flex justify-between mt-2"><span class="opacity-50">Bag</span><span class="font-bold">$130.00</span></p>
-              </div>
-    
-              <!-- Slide 3 -->
-              <div class="swiper-slide">
-                <img src="images/yellow_reserved_hoodie.png" alt="">
-                <p class="mt-2 font-bold">Yellow Reserved Hoodie</p>
-                <p class="flex justify-between mt-2"><span class="opacity-50">Dress</span> <span><del class="text-xs opacity-50">$364.00</del> <span class="text-red-500 font-bold">$155.00</span></span></p>
-              </div>
-    
-              <!-- Slide 4 -->
-              <div class="swiper-slide">
-                <img src="images/nike_air_zoom.png" alt="">
-                <p class="mt-2 font-bold">Nike Air Zoom Pegasus</p>
-                <p class="flex justify-between mt-2"><span class="opacity-50">Shoe</span> <span><del class="text-xs opacity-50">$220.00</del> <span class="text-red-500 font-bold">$198.00</span></span></p>
-              </div>
+
+          <div class="grid grid-cols-4 gap-5"> 
+            <div>
+              <img src="images/top-product (2).png" alt="">
+              <p class="mt-2 font-bold">Basics Dress Green</p>
+              <p class="flex justify-between mt-2"><span class="opacity-50">Dress</span> <span class="font-bold">$236.00</span></p>
+            
             </div>
-            <!-- Ajouter Pagination -->
-            <div class="swiper-pagination"></div>
-            <!-- Ajouter Navigation -->
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
+            <div>
+              <img src="images/nike_sportwear.png" alt="">
+              <p class="mt-2 font-bold">Nike Sportswear Futura Luxe</p>
+              <p class="flex justify-between mt-2"><span class="opacity-50">Bag</span><span class="font-bold">$130.00</span></p>
+            
+            </div>
+
+            <div>
+              <img src="images/yellow_reserved_hoodie.png" alt="">
+              <p class="mt-2 font-bold">Yellow Reserved Hoodie</p>
+              <p class="flex justify-between mt-2"><span class="opacity-50">Dress</span> <span><del class="text-xs opacity-50">$364.00</del> <span class="text-red-500 font-bold">$155.00</span></span></p>
+            </div>
+
+            <div>
+              <img src="images/nike_air_zoom.png" alt="">
+              <p class="mt-2 font-bold">Nike Air Zoom Pegasus</p>
+              <p class="flex justify-between mt-2"><span class="opacity-50">Shoe</span> <span><del class="text-xs opacity-50">$220.00</del> <span class="text-red-500 font-bold">$198.00</span></span></p>
+            
+            </div>
+
+            
           </div>
+         
         </div>
+        
       </div>
     </section>
     
@@ -683,24 +660,5 @@ label {
 
     </footer>
   
-    <script>
-      document.addEventListener('DOMContentLoaded', function () {
-        var mySwiper = new Swiper('.mySwiper', {
-          // Paramètres de Swiper
-          loop: true,
-          slidesPerView: 1,
-          spaceBetween: 30,
-          pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-          },
-          navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-          },
-        });
-      });
-    </script>
-    
   </body>
 </html>
