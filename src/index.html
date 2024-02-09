@@ -11,7 +11,7 @@
     <link href="./output.css" rel="stylesheet" />
   </head>
 <style>
-  
+
   /* Centrer les slides dans Swiper pour les écrans < 768px */
 @media (max-width: 767px) {
   .mySwiper .swiper-wrapper {
@@ -123,7 +123,7 @@ label {
     <div>
       
       <div class="pt-10 flex gap-8 justify-between px-5 max-md:flex-wrap max-w-[1320px]">
-   
+          <!-- <div class="hamburger"><img src="images/bars-solid.svg" alt=""></div> -->
           <div class="my-auto text-xs font-black text-center ml-6 hidden sm:block">
               <img src="images/icon_recherche.png" alt="" />
           </div>
@@ -146,17 +146,18 @@ label {
           </div>
       
     </div>
-      <hr class="mt-4 w-full bg-neutral-100 min-h-[1px] max-md:max-w-full"></hr>
-      <nav class="pt-5 px-1 lg:px-[2em] mt-4 text-base capitalize hidden sm:block">
-        <ul class="flex gap-10 justify-around max-md:flex-wrap pl-8">
-          <li href="#" class="label" aria-label="Jewelry & Accessories">Jewelry & Accessories</li>
-          <li href="#" class="label" aria-label="Clothing & Shoes">Clothing & Shoes</li>
-          <li href="#" class="label" aria-label="Home & Living">Home & Living</li>
-          <li href="#" class="label" aria-label="Wedding & Party">Wedding & Party</li>
-          <li href="#" class="label" aria-label="Toys & Entertainment">Toys & Entertainment</li>
-          <li href="#" class="label" aria-label="Art & Collectibles">Art & Collectibles</li>
-          <li href="#" class="label grow" aria-label="Craft Supplies & Tools">Craft Supplies & Tools</li>
+      <hr class="mt-4 w-full bg-neutral-100 min-h-[1px] max-md:max-w-full">
+      <nav class="menu  pt-5 px-1 lg:px-[2em] mt-4 text-base capitalize hidden sm:block">
+        <ul class="flex gap-10 justify-around max-md:flex-wrap pl-8 ">
+          <li href="#" class="label hover:text-red-500" aria-label="Jewelry & Accessories">Jewelry & Accessories</li>
+          <li href="#" class="label hover:text-red-500" aria-label="Clothing & Shoes">Clothing & Shoes</li>
+          <li href="#" class="label hover:text-red-500" aria-label="Home & Living">Home & Living</li>
+          <li href="#" class="label hover:text-red-500" aria-label="Wedding & Party">Wedding & Party</li>
+          <li href="#" class="label hover:text-red-500" aria-label="Toys & Entertainment">Toys & Entertainment</li>
+          <li href="#" class="label hover:text-red-500" aria-label="Art & Collectibles">Art & Collectibles</li>
+          <li href="#" class="label grow hover:text-red-500" aria-label="Craft Supplies & Tools">Craft Supplies & Tools</li>
         </ul>
+        <!-- <div class="cross"><img src="images/xmark-solid.svg" alt=""></div> -->
       </nav>
   </div>
 </header>  
@@ -168,9 +169,7 @@ label {
       <div class="mt-16 max-w-full max-md:mt-10">
         <div class="flex gap-5 max-md:flex-col max-md:gap-0 max-md:">
           <div class="flex flex-col w-[61%] max-md:ml-0 max-md:w-full">
-            <div
-              class="flex flex-col self-stretch my-auto text-black max-md:mt-10"
-            >
+            <div class="flex flex-col self-stretch my-auto text-black max-md:mt-10" >
               <h1 class="sm:text-6xl text-4xl leading-7 capitalize font-bold">
                 Collections
               </h1>
@@ -614,31 +613,31 @@ label {
           <!-- Catalog Section -->
           <div class="flex flex-col w-full mt-8">
             <h5 class="text-xl font-bold text-black">CATALOG</h5>
-            <div class="mt-4">Necklaces</div>
-            <div class="mt-1.5">Hoodies</div>
-            <div class="mt-1.5">Jewelry Box</div>
-            <div class="mt-2">T-shirt</div>
-            <div class="mt-1.5">Jacket</div>
+            <div class="mt-4 hover:text-red-500">Necklaces</div>
+            <div class="mt-1.5 hover:text-red-500">Hoodies</div>
+            <div class="mt-1.5 hover:text-red-500">Jewelry Box</div>
+            <div class="mt-2 hover:text-red-500">T-shirt</div>
+            <div class="mt-1.5 hover:text-red-500">Jacket</div>
           </div>
     
           <!-- About Us Section -->
           <div class="flex flex-col w-full mt-8">
             <h5 class="text-xl font-bold text-black">ABOUT US</h5>
-            <div class="mt-4">Our Producers</div>
-            <div class="mt-1.5">Sitemap</div>
-            <div class="mt-1.5">FAQ</div>
-            <div class="mt-2">About Us</div>
-            <div class="mt-1.5">Terms & Conditions</div>
+            <div class="mt-4 hover:text-red-500">Our Producers</div>
+            <div class="mt-1.5 hover:text-red-500">Sitemap</div>
+            <div class="mt-1.5 hover:text-red-500">FAQ</div>
+            <div class="mt-2 hover:text-red-500">About Us</div>
+            <div class="mt-1.5 hover:text-red-500">Terms & Conditions</div>
           </div>
     
           <!-- Customer Services Section -->
           <div class="flex flex-col w-full mt-8">
             <div class="text-xl font-bold text-black">CUSTOMER SERVICES</div>
-            <div class="mt-4">Contact Us</div>
-            <div class="mt-1.5">Track Your Order</div>
-            <div class="mt-1.5">Product Care & Repair</div>
-            <div class="mt-2">Book an Appointment</div>
-            <div class="mt-1.5">Shipping & Returns</div>
+            <div class="mt-4 hover:text-red-500">Contact Us</div>
+            <div class="mt-1.5 hover:text-red-500">Track Your Order</div>
+            <div class="mt-1.5 hover:text-red-500">Product Care & Repair</div>
+            <div class="mt-2 hover:text-red-500">Book an Appointment</div>
+            <div class="mt-1.5 hover:text-red-500">Shipping & Returns</div>
           </div>
         </div>
         </div>
@@ -683,7 +682,21 @@ label {
 });
 
     </script>
-    
+
+    <script>
+const hamburger = document.querySelector(".hamburger");
+const menu = document.querySelector(".menu");
+const cross = document.querySelector(".cross");
+
+hamburger.addEventListener('click', () => {
+    menu.classList.toggle('mobile-menu');
+});
+
+cross.addEventListener('click', () => {
+    menu.classList.remove('mobile-menu');
+});
+</script>
+
     
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   </body>
