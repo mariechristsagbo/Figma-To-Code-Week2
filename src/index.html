@@ -7,26 +7,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.css" rel="stylesheet" />
+
     <link href="./output.css" rel="stylesheet" />
   </head>
 <style>
 
-  /* Centrer les slides dans Swiper pour les écrans < 768px */
-@media (max-width: 767px) {
-  .mySwiper .swiper-wrapper {
-    justify-content: center; /* Centrer les slides horizontalement */
-    align-items: center; /* Centrer les slides verticalement si nécessaire */
-  }
-
-  .mySwiper .swiper-slide {
-    display: flex;
-    justify-content: center; /* Centrer le contenu de chaque slide */
-    align-items: center; /* Centrer verticalement si vos slides ont des hauteurs variables */
-  }
-}
-
+  
   .group {
  position: relative;
 }
@@ -212,23 +198,23 @@ label {
       </div>!-->
 
     <!-- Conteneur Swiper -->
-<div class="swiper mySwiper mt-10 sm:mx-auto pb-10">
-  <!-- Wrapper pour les slides -->
-  <div class="swiper-wrapper sm:mx auto">
-    <!-- Chaque slide avec une image -->
-    <div class="swiper-slide">
+<div class=" mt-10 sm:mx-auto pb-10 ">
+  
+  <div class="sm:mx auto place-items-center grid grid-cols-5">
+    
+    <div>
       <img loading="lazy" src="images/logo_five.svg" class="max-w-full w-[200px]" />
     </div>
-    <div class="swiper-slide">
+    <div>
       <img loading="lazy" src="images/logo_one.png" class="max-w-full w-[200px]" />
     </div>
-    <div class="swiper-slide">
+    <div>
       <img loading="lazy" src="images/logo_three.png" class="max-w-full w-[200px]" />
     </div>
-    <div class="swiper-slide">
+    <div>
       <img loading="lazy" src="images/logo_two.png" class="max-w-full w-[200px]" />
     </div>
-    <div class="swiper-slide">
+    <div>
       <img loading="lazy" src="images/logo_four.png" class="max-w-full w-[200px]" />
     </div>
   </div>
@@ -400,7 +386,7 @@ label {
             </button>
           </div>
 
-          <div class="grid grid-cols-4 gap-5"> 
+          <div class="grid lg:grid-cols-4 grid-cols-1 gap-5"> 
             <div class="duration-500 hover:scale-105">
               <img src="images/top-product.png" alt="">
               <p class="mt-2 font-bold">Adicolors Classics Joggers</p>
@@ -520,7 +506,7 @@ label {
             </button>
           </div>
 
-          <div class="grid grid-cols-4 gap-5"> 
+          <div class="grid lg:grid-cols-4 grid-cols-1 gap-5"> 
             
             <div class="duration-500 hover:scale-105">
               <img class="" src="images/top-product (2).png" alt="">
@@ -657,32 +643,7 @@ label {
     
 
     </footer>
-    <script>
-    document.addEventListener('DOMContentLoaded', () => {
-  var swiper = new Swiper('.mySwiper', {
     
-    slidesPerView: 1, // 1 slide par défaut pour les petits écrans
-    spaceBetween: 10, // Espace entre les slides pour les petits écrans
-    breakpoints: {
-      // À partir de 640px
-      640: {
-        slidesPerView: 2, // Afficher 2 slides sur les écrans moyens
-        spaceBetween: 20, // Espace entre les slides
-      },
-      // À partir de 1024px, ajustez ce nombre selon le nombre de logos que vous avez
-      1024: {
-        slidesPerView: 5, // Augmentez ce nombre selon le total de vos logos pour les grands écrans
-        spaceBetween: 30,
-      },
-    },
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-  });
-});
-
-    </script>
 
     <script>
 const hamburger = document.querySelector(".hamburger");
@@ -698,7 +659,6 @@ cross.addEventListener('click', () => {
 });
 </script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  
   </body>
 </html>
