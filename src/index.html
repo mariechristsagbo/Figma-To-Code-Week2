@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <meta name="description" content="Coral">
 
     <link href="./output.css" rel="stylesheet" />
   </head>
@@ -151,52 +152,37 @@ label {
   
 
     <div
-      class="flex flex-col items-center pt-12 pb-8 bg-gray-800 bg-opacity-10 max-md:px-5 "
+      class="bg-gray-800 bg-opacity-10 py-16 px-5 "
     >
-      <div class="mt-16 max-w-full max-md:mt-10">
-        <div class="flex justify-between border max-w-[1320px] mx-auto flex-col lg:flex-row">
-          <div class="flex flex-col w-[61%] max-md:ml-0 max-md:w-full">
-            <div class="flex flex-col self-stretch my-auto text-black max-md:mt-10" >
-              <h1 class="sm:text-6xl text-4xl leading-7 capitalize font-bold">
-                Collections
-              </h1>
-              <p class="mt-9 text-base leading-7 capitalize">
-                You can explore and shop many different collections from various
-                brands here.
-              </p>
-              <div
-                class="flex gap-1.5 justify-center self-start px-4 py-2.5 mt-11 rounded-md text-white whitespace-nowrap bg-gray-800 hover:bg-red-500 max-md:mt-10"
-              >
-                <div
-                  class="my-auto text-sm font-black text-center"
-                  aria-label="Shop Icon"
-                >
-                  <img src="images/icon.png" alt="" />
-                </div>
-                <a
-                  href="#"
-                  class="grow text-2xl capitalize"
-                  aria-label="Shop Now"
-                  >Shop now</a
-                >
-              </div>
-            </div>
-          </div>
-          <div class="flex flex-col ml-5 w-[39%] max-md:ml-0 max-md:w-full">
-            <img
-              loading="lazy"
-              src="images/image-product.png"
-              class="grow w-full aspect-[0.79] max-md:mt-10"
-            />
-          </div>
-        </div>
-      </div>
-    </div>
-    <!--<div class="flex gap-5 justify-between items-start max-md:flex-wrap">
-        <img loading="lazy" src="/src/images/Frame.svg" class="self-end mt-32 w-16 aspect-[0.95] max-md:mt-10" />
-        <img loading="lazy" src="/src/images/Vector.svg" class="self-start max-w-full aspect-[0.66] w-[114px]" />
-      </div>!-->
+    <div class="flex justify-between px-8 gap-5 flex-col-reverse md:flex-row max-w-[1320px] mx-auto">
+      <div class="flex flex-col gap-2 justify-center space-y-5">
+        <h1 class="text-6xl font-bold">Collections</h1>
+        <p class="max-w-sm">You Can Explore And Shop Many Different Collections from
+          Various Brands Here
+        </p>
 
+        <button
+        class="flex gap-1.5 justify-center self-start px-4 py-2.5 mt-4 rounded-md text-white whitespace-nowrap bg-gray-800 hover:bg-red-500 max-md:mt-10"
+      >
+        <div
+          class="my-auto text-sm font-black text-center"
+          aria-label="Shop Icon"
+        >
+          <img src="images/icon.png" alt="" />
+        </div>
+        <a
+          href="#"
+          class="grow text-2xl capitalize"
+          aria-label="Shop Now"
+          >Shop now</a
+        >
+      </button>
+      </div> 
+    
+      <img  src="images/image-product.png">
+    </div>
+    </div> 
+    
     <!-- Conteneur Swiper -->
 <div class=" mt-10 sm:mx-auto pb-10 ">
   
@@ -369,7 +355,7 @@ label {
           Products
         </h1>
 
-        <div class="#">
+        <div>
           <div
             class="flex lg:flex-row gap-5 flex-col justify-between items-center mb-6"
           >
@@ -386,7 +372,7 @@ label {
             </button>
           </div>
 
-          <div class="grid lg:grid-cols-4 grid-cols-1 gap-5"> 
+          <div class="grid lg:grid-cols-4 grid-cols-1 gap-5 md:grid-cols-2"> 
             <div class="duration-500 hover:scale-105">
               <img src="images/top-product.png" alt="">
               <p class="mt-2 font-bold">Adicolors Classics Joggers</p>
@@ -506,7 +492,7 @@ label {
             </button>
           </div>
 
-          <div class="grid lg:grid-cols-4 grid-cols-1 gap-5"> 
+          <div class="grid lg:grid-cols-4 grid-cols-1 md:grid-cols-2 gap-5"> 
             
             <div class="duration-500 hover:scale-105">
               <img class="" src="images/top-product (2).png" alt="">
